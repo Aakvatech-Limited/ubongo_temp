@@ -1,7 +1,9 @@
 # Governance Risk — five-star assessment
 
-Likelihood and Impact are interactive five-star Rating controls. Frappe stores Rating as a fraction: one star = 0.2 and five stars = 1.0. Half stars are supported. Risk Score = (Likelihood Rating × 5) × (Impact Rating × 5), with a possible range of 1 to 25. Score uses a Float field to preserve half-star precision.
+Likelihood and Impact are Frappe Rating controls with five stars each, preserving their original fieldnames.
 
-The previous `likelihood` and `impact` integer fields are retained but hidden for backward compatibility and set to nearest whole star on save. Existing records are initialized from the previous integer values by the post-model-sync patch `ubongo_temp.patches.v16_0.backfill_governance_risk_stars`. No raw SQL is used.
+Frappe stores one filled star as 0.2, three stars as 0.6, and five stars as 1.0. Half stars are supported. Risk Score = (likelihood × 5) × (impact × 5), yielding 1–25, potentially in quarter-point steps. The score is read-only and automatically recalculated on save.
 
-Run `bench --site SITE migrate`, then check existing 1-star, 3-star and 5-star risks and edit a half-star value. The star values should be authoritative for new records.
+No existing risk data needs conversion, so there are no additional migration fields or backfill patches. Use `bench --site SITE migrate` after updating the app. Demo risk is configured for three-star likelihood and four-star impact (score 12).
+
+No raw SQL is used.

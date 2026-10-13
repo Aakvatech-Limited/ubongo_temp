@@ -1,4 +1,4 @@
-"""Explicit opt-in demo seed. Run bench --site SITE execute ubongo_temp.governance.demo.install_demo."""
+"""Explicit opt-in demo seed. Run bench --site SITE execute ubongo_temp.ubongo_governance.demo.install_demo."""
 import frappe
 from frappe.utils import add_days, today
 
@@ -20,7 +20,7 @@ def install_demo():
     })
     _ensure("Governance Risk", "risk_title", "[DEMO] Vendor continuity risk", {
         "domain": "Operations", "project": p, "functional_area": "Procurement", "owner": user,
-        "likelihood_rating": 0.6, "impact_rating": 0.8, "status": "Treating", "treatment": "Mitigate",
+        "likelihood": 0.6, "impact": 0.8, "status": "Treating", "treatment": "Mitigate",
         "mitigation_plan": "Evaluate alternate suppliers and review quarterly.",
         "review_date": add_days(today(), 20)
     })

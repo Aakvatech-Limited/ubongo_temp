@@ -22,19 +22,15 @@ def validate_darci(doc, method=None):
         frappe.throw("Project end date must not precede start date")
 
 def validate_risk(doc, method=None):
-    # Frappe Rating stores the proportion of filled stars (0.2 = one star).
-    # New star ratings are authoritative; legacy integer fields remain only
-    # for backwards-compatible consumers.
-    from decimal import Decimal, ROUND_HALF_UP
+    # Frappe Rating persists a normalized fraction (one star = 0.2).
+    from decimal import Decimal
 
-    likelihood = Decimal(str(doc.likelihood_rating or 0)) * 5
-    impact = Decimal(str(doc.impact_rating or 0)) * 5
+    likelihood = Decimal(str(doc.likelihood or 0)) * 5
+    impact = Decimal(str(doc.impact or 0)) * 5
     for label, stars in (("Likelihood", likelihood), ("Impact", impact)):
         if stars < 1 or stars > 5 or stars * 2 != (stars * 2).to_integral_value():
             frappe.throw(label + " must be between 1 and 5 stars in half-star increments")
 
-    doc.likelihood = int(likelihood.quantize(Decimal("1"), rounding=ROUND_HALF_UP))
-    doc.impact = int(impact.quantize(Decimal("1"), rounding=ROUND_HALF_UP))
     doc.risk_score = float(likelihood * impact)
     if doc.status in ("Treating", "Monitoring") and not doc.mitigation_plan:
         frappe.throw("A mitigation plan is required while treating/monitoring a risk")

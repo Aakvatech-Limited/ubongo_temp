@@ -19,8 +19,6 @@
     "owner",
     "status",
     "section_2",
-    "likelihood_rating",
-    "impact_rating",
     "likelihood",
     "impact",
     "column_2",
@@ -92,40 +90,22 @@
       "collapsible": 0
     },
     {
-      "fieldname": "likelihood_rating",
+      "fieldname": "likelihood",
       "label": "Likelihood",
       "fieldtype": "Rating",
-      "options": "5",
       "default": "0.2",
       "reqd": 1,
-      "description": "Five-star likelihood: 1 = rare, 5 = almost certain. Half-stars allowed."
-    },
-    {
-      "fieldname": "impact_rating",
-      "label": "Impact",
-      "fieldtype": "Rating",
-      "options": "5",
-      "default": "0.2",
-      "reqd": 1,
-      "description": "Five-star impact: 1 = insignificant, 5 = severe. Half-stars allowed."
-    },
-    {
-      "fieldname": "likelihood",
-      "label": "Likelihood (1-5)",
-      "fieldtype": "Int",
-      "default": 1,
-      "reqd": 0,
-      "hidden": 1,
-      "description": "Legacy whole-number scale for compatibility; use the visible five-star rating."
+      "description": "Five-star likelihood: 1 = rare, 5 = almost certain. Half stars supported.",
+      "options": "5"
     },
     {
       "fieldname": "impact",
-      "label": "Impact (1-5)",
-      "fieldtype": "Int",
-      "default": 1,
-      "reqd": 0,
-      "hidden": 1,
-      "description": "Legacy whole-number scale for compatibility; use the visible five-star rating."
+      "label": "Impact",
+      "fieldtype": "Rating",
+      "default": "0.2",
+      "reqd": 1,
+      "description": "Five-star impact: 1 = insignificant, 5 = severe. Half stars supported.",
+      "options": "5"
     },
     {
       "fieldname": "column_2",

@@ -1,0 +1,130 @@
+{
+  "doctype": "DocType",
+  "name": "Governance Project",
+  "module": "Governance",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "hash",
+  "editable_grid": 0,
+  "title_field": "project_title",
+  "search_fields": "project_title,business_unit",
+  "field_order": [
+    "project_title",
+    "erpnext_project",
+    "project_link_doctype",
+    "business_unit",
+    "owner",
+    "status",
+    "start_date",
+    "end_date",
+    "darci",
+    "summary"
+  ],
+  "fields": [
+    {
+      "fieldname": "project_title",
+      "label": "Project Title",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "erpnext_project",
+      "label": "ERPNext Project",
+      "fieldtype": "Dynamic Link",
+      "options": "project_link_doctype"
+    },
+    {
+      "fieldname": "project_link_doctype",
+      "label": "Project Link Type",
+      "fieldtype": "Data",
+      "default": "Project",
+      "hidden": 1
+    },
+    {
+      "fieldname": "business_unit",
+      "label": "Functional Area",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "owner",
+      "label": "Project Owner",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nActive\nOn Hold\nCompleted\nCancelled",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "start_date",
+      "label": "Start Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "end_date",
+      "label": "End Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "darci",
+      "label": "DARCI Allocation",
+      "fieldtype": "Table",
+      "options": "DARCI Assignment",
+      "reqd": 1
+    },
+    {
+      "fieldname": "summary",
+      "label": "Overview",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 0
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

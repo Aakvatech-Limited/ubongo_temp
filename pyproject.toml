@@ -1,0 +1,16 @@
+[build-system]
+requires = ["flit_core>=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ubongo_temp"
+version = "0.1.0"
+description = "DARCI, enterprise risk, compliance, contracts and IP governance for Frappe"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.bench.frappe-dependencies]
+frappe = ">=16.50.0"
+
+[tool.ruff]
+line-length = 110

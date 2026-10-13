@@ -1,0 +1,15 @@
+name: Prevent raw SQL
+on:
+  push:
+  pull_request:
+
+jobs:
+  raw-sql-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reject direct SQL execution in Python
+        run: python scripts/check_no_raw_sql.py

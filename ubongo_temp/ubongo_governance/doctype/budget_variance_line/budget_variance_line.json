@@ -20,26 +20,30 @@
       "fieldname": "account",
       "label": "Account / Cost Center",
       "fieldtype": "Data",
-      "reqd": 1
+      "reqd": 1,
+      "in_list_view": 1
     },
     {
       "fieldname": "category",
       "label": "Category",
       "fieldtype": "Select",
       "options": "Revenue\nExpense\nCapital",
-      "reqd": 1
+      "reqd": 1,
+      "in_list_view": 1
     },
     {
       "fieldname": "budget",
       "label": "Budget",
       "fieldtype": "Currency",
-      "reqd": 1
+      "reqd": 1,
+      "in_list_view": 1
     },
     {
       "fieldname": "actual",
       "label": "Actual",
       "fieldtype": "Currency",
-      "reqd": 1
+      "reqd": 1,
+      "in_list_view": 1
     },
     {
       "fieldname": "variance",

@@ -6,20 +6,34 @@
   "istable": 0,
   "autoname": "hash",
   "field_order": [
+    "section_1",
     "forecast_title",
     "scenario",
     "currency",
-    "from_period",
-    "to_period",
-    "status",
+    "column_1",
     "owner",
+    "status",
+    "section_2",
+    "from_period",
+    "column_2",
+    "to_period",
+    "section_3",
     "lines",
+    "section_4",
     "total_revenue",
     "total_cost",
+    "column_4",
     "net_projection",
+    "section_5",
     "assumptions"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Forecast Details",
+      "collapsible": 0
+    },
     {
       "fieldname": "forecast_title",
       "label": "Forecast Title",
@@ -41,16 +55,14 @@
       "reqd": 1
     },
     {
-      "fieldname": "from_period",
-      "label": "Start Period",
-      "fieldtype": "Data",
-      "reqd": 1
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
     },
     {
-      "fieldname": "to_period",
-      "label": "End Period",
-      "fieldtype": "Data",
-      "reqd": 1
+      "fieldname": "owner",
+      "label": "Owner",
+      "fieldtype": "Link",
+      "options": "User"
     },
     {
       "fieldname": "status",
@@ -60,10 +72,32 @@
       "default": "Draft"
     },
     {
-      "fieldname": "owner",
-      "label": "Owner",
-      "fieldtype": "Link",
-      "options": "User"
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Planning Period",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "from_period",
+      "label": "Start Period",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "to_period",
+      "label": "End Period",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Projection Lines",
+      "collapsible": 0
     },
     {
       "fieldname": "lines",
@@ -71,6 +105,12 @@
       "fieldtype": "Table",
       "options": "Financial Forecast Line",
       "reqd": 1
+    },
+    {
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Forecast Totals",
+      "collapsible": 0
     },
     {
       "fieldname": "total_revenue",
@@ -85,10 +125,20 @@
       "read_only": 1
     },
     {
+      "fieldname": "column_4",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "net_projection",
       "label": "Net Projection",
       "fieldtype": "Currency",
       "read_only": 1
+    },
+    {
+      "fieldname": "section_5",
+      "fieldtype": "Section Break",
+      "label": "Assumptions",
+      "collapsible": 0
     },
     {
       "fieldname": "assumptions",

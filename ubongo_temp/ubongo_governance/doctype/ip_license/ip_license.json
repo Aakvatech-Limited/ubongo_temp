@@ -9,19 +9,31 @@
   "editable_grid": 0,
   "search_fields": "asset,licensee",
   "field_order": [
+    "section_1",
     "asset",
     "licensee",
     "license_type",
+    "column_1",
+    "owner",
     "territory",
-    "permitted_use",
+    "status",
+    "section_2",
     "valid_from",
     "valid_until",
-    "status",
+    "column_2",
     "agreement",
-    "owner",
+    "section_3",
+    "permitted_use",
+    "section_4",
     "notes"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "License Details",
+      "collapsible": 0
+    },
     {
       "fieldname": "asset",
       "label": "IP Asset",
@@ -45,15 +57,33 @@
       "reqd": 1
     },
     {
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "owner",
+      "label": "Responsible Owner",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
       "fieldname": "territory",
       "label": "Territory",
       "fieldtype": "Data"
     },
     {
-      "fieldname": "permitted_use",
-      "label": "Permitted Usage",
-      "fieldtype": "Text Editor",
-      "reqd": 1
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nActive\nSuspended\nExpired\nRevoked",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Validity and Evidence",
+      "collapsible": 0
     },
     {
       "fieldname": "valid_from",
@@ -69,12 +99,8 @@
       "in_list_view": 1
     },
     {
-      "fieldname": "status",
-      "label": "Status",
-      "fieldtype": "Select",
-      "options": "Draft\nActive\nSuspended\nExpired\nRevoked",
-      "default": "Draft",
-      "in_list_view": 1
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
     },
     {
       "fieldname": "agreement",
@@ -82,10 +108,22 @@
       "fieldtype": "Attach"
     },
     {
-      "fieldname": "owner",
-      "label": "Responsible Owner",
-      "fieldtype": "Link",
-      "options": "User"
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Permitted Usage",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "permitted_use",
+      "label": "Permitted Usage",
+      "fieldtype": "Text Editor",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Restrictions and Notes",
+      "collapsible": 0
     },
     {
       "fieldname": "notes",

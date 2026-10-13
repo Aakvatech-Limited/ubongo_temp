@@ -10,17 +10,28 @@
   "title_field": "requirement_title",
   "search_fields": "requirement_title,standard,functional_area",
   "field_order": [
+    "section_1",
     "requirement_title",
     "standard",
     "functional_area",
+    "column_1",
     "owner",
+    "status",
+    "section_2",
     "frequency",
     "due_date",
-    "status",
-    "control_description",
-    "policy_document"
+    "column_2",
+    "policy_document",
+    "section_3",
+    "control_description"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Requirement",
+      "collapsible": 0
+    },
     {
       "fieldname": "requirement_title",
       "label": "Requirement",
@@ -42,10 +53,27 @@
       "in_list_view": 1
     },
     {
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "owner",
       "label": "Control Owner",
       "fieldtype": "Link",
       "options": "User"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Active\nInactive",
+      "default": "Active"
+    },
+    {
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Monitoring",
+      "collapsible": 0
     },
     {
       "fieldname": "frequency",
@@ -60,21 +88,24 @@
       "fieldtype": "Date"
     },
     {
-      "fieldname": "status",
-      "label": "Status",
-      "fieldtype": "Select",
-      "options": "Active\nInactive",
-      "default": "Active"
-    },
-    {
-      "fieldname": "control_description",
-      "label": "Control Description",
-      "fieldtype": "Text Editor"
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
     },
     {
       "fieldname": "policy_document",
       "label": "Policy Document",
       "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Control Description",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "control_description",
+      "label": "Control Description",
+      "fieldtype": "Text Editor"
     }
   ],
   "permissions": [

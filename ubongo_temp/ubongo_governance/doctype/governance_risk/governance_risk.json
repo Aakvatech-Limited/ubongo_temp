@@ -10,22 +10,36 @@
   "title_field": "risk_title",
   "search_fields": "risk_title,functional_area",
   "field_order": [
+    "section_1",
     "risk_title",
     "domain",
     "project",
+    "column_1",
     "functional_area",
     "owner",
+    "status",
+    "section_2",
     "likelihood",
     "impact",
+    "column_2",
     "risk_score",
+    "section_3",
     "treatment",
-    "status",
     "review_date",
+    "column_3",
+    "evidence",
+    "section_4",
     "description",
-    "mitigation_plan",
-    "evidence"
+    "section_5",
+    "mitigation_plan"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Risk Identification",
+      "collapsible": 0
+    },
     {
       "fieldname": "risk_title",
       "label": "Risk Title",
@@ -47,6 +61,10 @@
       "options": "Governance Project"
     },
     {
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "functional_area",
       "label": "Functional Area",
       "fieldtype": "Data"
@@ -56,6 +74,20 @@
       "label": "Risk Owner",
       "fieldtype": "Link",
       "options": "User"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Open\nTreating\nMonitoring\nClosed",
+      "default": "Open",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Risk Assessment",
+      "collapsible": 0
     },
     {
       "fieldname": "likelihood",
@@ -72,11 +104,21 @@
       "reqd": 1
     },
     {
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "risk_score",
       "label": "Risk Score",
       "fieldtype": "Int",
       "read_only": 1,
       "in_list_view": 1
+    },
+    {
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Risk Treatment and Review",
+      "collapsible": 0
     },
     {
       "fieldname": "treatment",
@@ -86,17 +128,24 @@
       "default": "Mitigate"
     },
     {
-      "fieldname": "status",
-      "label": "Status",
-      "fieldtype": "Select",
-      "options": "Open\nTreating\nMonitoring\nClosed",
-      "default": "Open",
-      "in_list_view": 1
-    },
-    {
       "fieldname": "review_date",
       "label": "Next Review",
       "fieldtype": "Date"
+    },
+    {
+      "fieldname": "column_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "evidence",
+      "label": "Evidence",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Description",
+      "collapsible": 0
     },
     {
       "fieldname": "description",
@@ -104,14 +153,15 @@
       "fieldtype": "Text Editor"
     },
     {
+      "fieldname": "section_5",
+      "fieldtype": "Section Break",
+      "label": "Mitigation Plan",
+      "collapsible": 0
+    },
+    {
       "fieldname": "mitigation_plan",
       "label": "Mitigation Plan",
       "fieldtype": "Text Editor"
-    },
-    {
-      "fieldname": "evidence",
-      "label": "Evidence",
-      "fieldtype": "Attach"
     }
   ],
   "permissions": [

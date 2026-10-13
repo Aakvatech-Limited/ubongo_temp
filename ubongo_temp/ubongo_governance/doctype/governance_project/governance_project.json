@@ -10,18 +10,30 @@
   "title_field": "project_title",
   "search_fields": "project_title,business_unit",
   "field_order": [
+    "section_1",
     "project_title",
     "erpnext_project",
     "project_link_doctype",
+    "column_1",
     "business_unit",
     "owner",
     "status",
+    "section_2",
     "start_date",
+    "column_2",
     "end_date",
+    "section_3",
     "darci",
+    "section_4",
     "summary"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Project Details",
+      "collapsible": 0
+    },
     {
       "fieldname": "project_title",
       "label": "Project Title",
@@ -43,6 +55,10 @@
       "hidden": 1
     },
     {
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "business_unit",
       "label": "Functional Area",
       "fieldtype": "Data"
@@ -62,9 +78,19 @@
       "in_list_view": 1
     },
     {
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Project Schedule",
+      "collapsible": 0
+    },
+    {
       "fieldname": "start_date",
       "label": "Start Date",
       "fieldtype": "Date"
+    },
+    {
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
     },
     {
       "fieldname": "end_date",
@@ -72,11 +98,23 @@
       "fieldtype": "Date"
     },
     {
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "DARCI Responsibility Matrix",
+      "collapsible": 0
+    },
+    {
       "fieldname": "darci",
       "label": "DARCI Allocation",
       "fieldtype": "Table",
       "options": "DARCI Assignment",
       "reqd": 1
+    },
+    {
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Project Overview",
+      "collapsible": 0
     },
     {
       "fieldname": "summary",

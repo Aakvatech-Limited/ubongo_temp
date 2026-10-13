@@ -10,25 +10,39 @@
   "title_field": "contract_title",
   "search_fields": "contract_title,counterparty",
   "field_order": [
+    "section_1",
     "contract_title",
     "counterparty",
     "functional_area",
+    "column_1",
     "contract_owner",
     "stage",
+    "risk",
+    "section_2",
     "request_date",
     "start_date",
     "end_date",
+    "column_2",
     "renewal_notice_date",
     "version",
+    "section_3",
     "document",
-    "approval_notes",
+    "signed_document",
+    "column_3",
     "signature_provider",
     "signature_reference",
-    "signed_document",
+    "section_4",
     "obligations",
-    "risk"
+    "section_5",
+    "approval_notes"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Contract Details",
+      "collapsible": 0
+    },
     {
       "fieldname": "contract_title",
       "label": "Contract Title",
@@ -48,6 +62,10 @@
       "fieldtype": "Data"
     },
     {
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "contract_owner",
       "label": "Contract Owner",
       "fieldtype": "Link",
@@ -60,6 +78,18 @@
       "options": "Requested\nDrafting\nInternal Review\nNegotiation\nApproval Pending\nApproved\nSignature Pending\nExecuted\nActive\nExpired\nTerminated",
       "default": "Requested",
       "in_list_view": 1
+    },
+    {
+      "fieldname": "risk",
+      "label": "Related Risk",
+      "fieldtype": "Link",
+      "options": "Governance Risk"
+    },
+    {
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Term and Milestones",
+      "collapsible": 0
     },
     {
       "fieldname": "request_date",
@@ -79,6 +109,10 @@
       "in_list_view": 1
     },
     {
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "renewal_notice_date",
       "label": "Renewal / Notice Date",
       "fieldtype": "Date"
@@ -90,15 +124,25 @@
       "default": "1.0"
     },
     {
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Documents and Signatures",
+      "collapsible": 0
+    },
+    {
       "fieldname": "document",
       "label": "Current Document",
       "fieldtype": "Attach",
       "description": "Store contract versions as attachments; Frappe Version records capture field changes."
     },
     {
-      "fieldname": "approval_notes",
-      "label": "Approval / Negotiation Notes",
-      "fieldtype": "Text Editor"
+      "fieldname": "signed_document",
+      "label": "Signed Copy",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "column_3",
+      "fieldtype": "Column Break"
     },
     {
       "fieldname": "signature_provider",
@@ -111,9 +155,10 @@
       "fieldtype": "Data"
     },
     {
-      "fieldname": "signed_document",
-      "label": "Signed Copy",
-      "fieldtype": "Attach"
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Contract Obligations",
+      "collapsible": 0
     },
     {
       "fieldname": "obligations",
@@ -122,10 +167,15 @@
       "options": "Contract Obligation"
     },
     {
-      "fieldname": "risk",
-      "label": "Related Risk",
-      "fieldtype": "Link",
-      "options": "Governance Risk"
+      "fieldname": "section_5",
+      "fieldtype": "Section Break",
+      "label": "Approval and Negotiation Notes",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "approval_notes",
+      "label": "Approval / Negotiation Notes",
+      "fieldtype": "Text Editor"
     }
   ],
   "permissions": [

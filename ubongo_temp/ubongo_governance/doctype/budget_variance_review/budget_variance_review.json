@@ -6,18 +6,30 @@
   "istable": 0,
   "autoname": "hash",
   "field_order": [
+    "section_1",
     "review_title",
     "period_from",
     "period_to",
+    "column_1",
     "currency",
     "status",
+    "section_2",
     "lines",
+    "section_3",
     "total_budget",
     "total_actual",
+    "column_3",
     "total_variance",
+    "section_4",
     "findings"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Review Details",
+      "collapsible": 0
+    },
     {
       "fieldname": "review_title",
       "label": "Review Title",
@@ -37,6 +49,10 @@
       "reqd": 1
     },
     {
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "currency",
       "label": "Currency",
       "fieldtype": "Link",
@@ -51,11 +67,23 @@
       "default": "Draft"
     },
     {
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Budget vs Actual Lines",
+      "collapsible": 0
+    },
+    {
       "fieldname": "lines",
       "label": "Budget vs Actual",
       "fieldtype": "Table",
       "options": "Budget Variance Line",
       "reqd": 1
+    },
+    {
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Totals",
+      "collapsible": 0
     },
     {
       "fieldname": "total_budget",
@@ -70,10 +98,20 @@
       "read_only": 1
     },
     {
+      "fieldname": "column_3",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "total_variance",
       "label": "Total Variance",
       "fieldtype": "Currency",
       "read_only": 1
+    },
+    {
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Findings",
+      "collapsible": 0
     },
     {
       "fieldname": "findings",

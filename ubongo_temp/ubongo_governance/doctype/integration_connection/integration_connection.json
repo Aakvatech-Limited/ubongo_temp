@@ -6,21 +6,34 @@
   "istable": 0,
   "autoname": "hash",
   "field_order": [
+    "section_1",
     "connection_name",
     "provider",
-    "enabled",
     "mode",
-    "endpoint",
-    "tenant_id",
-    "client_id",
-    "client_secret",
-    "access_token",
-    "webhook_secret",
+    "column_1",
+    "enabled",
     "sync_direction",
     "last_sync_status",
+    "section_2",
+    "endpoint",
+    "column_2",
+    "tenant_id",
+    "section_3",
+    "client_id",
+    "client_secret",
+    "column_3",
+    "access_token",
+    "webhook_secret",
+    "section_4",
     "notes"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Provider",
+      "collapsible": 0
+    },
     {
       "fieldname": "connection_name",
       "label": "Connection Name",
@@ -35,12 +48,6 @@
       "reqd": 1
     },
     {
-      "fieldname": "enabled",
-      "label": "Enabled",
-      "fieldtype": "Check",
-      "default": 0
-    },
-    {
       "fieldname": "mode",
       "label": "Connection Mode",
       "fieldtype": "Select",
@@ -48,34 +55,14 @@
       "default": "REST API"
     },
     {
-      "fieldname": "endpoint",
-      "label": "Service Endpoint",
-      "fieldtype": "Data"
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
     },
     {
-      "fieldname": "tenant_id",
-      "label": "Tenant / Workspace",
-      "fieldtype": "Data"
-    },
-    {
-      "fieldname": "client_id",
-      "label": "Client ID",
-      "fieldtype": "Data"
-    },
-    {
-      "fieldname": "client_secret",
-      "label": "Client Secret",
-      "fieldtype": "Password"
-    },
-    {
-      "fieldname": "access_token",
-      "label": "Access Token",
-      "fieldtype": "Password"
-    },
-    {
-      "fieldname": "webhook_secret",
-      "label": "Webhook Secret",
-      "fieldtype": "Password"
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": 0
     },
     {
       "fieldname": "sync_direction",
@@ -91,6 +78,62 @@
       "options": "Never Run\nSuccess\nFailed",
       "default": "Never Run",
       "read_only": 1
+    },
+    {
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Endpoint and Tenant",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "endpoint",
+      "label": "Service Endpoint",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "tenant_id",
+      "label": "Tenant / Workspace",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Authentication",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "client_id",
+      "label": "Client ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "client_secret",
+      "label": "Client Secret",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "column_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "access_token",
+      "label": "Access Token",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "webhook_secret",
+      "label": "Webhook Secret",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Mapping and Notes",
+      "collapsible": 0
     },
     {
       "fieldname": "notes",

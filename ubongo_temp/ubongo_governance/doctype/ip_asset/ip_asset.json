@@ -10,21 +10,34 @@
   "title_field": "asset_title",
   "search_fields": "asset_title,registration_number",
   "field_order": [
+    "section_1",
     "asset_title",
     "asset_type",
     "owner",
+    "column_1",
     "functional_area",
+    "status",
+    "territory",
+    "section_2",
     "registration_number",
     "registration_date",
+    "column_2",
     "expiry_date",
-    "territory",
-    "status",
-    "rights_summary",
     "document",
+    "section_3",
     "infringement_status",
+    "section_4",
+    "rights_summary",
+    "section_5",
     "infringement_notes"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Asset Identification",
+      "collapsible": 0
+    },
     {
       "fieldname": "asset_title",
       "label": "IP Asset",
@@ -46,9 +59,32 @@
       "options": "User"
     },
     {
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "functional_area",
       "label": "Functional Area",
       "fieldtype": "Data"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nRegistered\nActive\nDisputed\nExpired\nArchived",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "territory",
+      "label": "Territory",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Registration",
+      "collapsible": 0
     },
     {
       "fieldname": "registration_number",
@@ -61,27 +97,13 @@
       "fieldtype": "Date"
     },
     {
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "expiry_date",
       "label": "Registration Expiry",
       "fieldtype": "Date"
-    },
-    {
-      "fieldname": "territory",
-      "label": "Territory",
-      "fieldtype": "Data"
-    },
-    {
-      "fieldname": "status",
-      "label": "Status",
-      "fieldtype": "Select",
-      "options": "Draft\nRegistered\nActive\nDisputed\nExpired\nArchived",
-      "default": "Draft",
-      "in_list_view": 1
-    },
-    {
-      "fieldname": "rights_summary",
-      "label": "Ownership / Usage Rights",
-      "fieldtype": "Text Editor"
     },
     {
       "fieldname": "document",
@@ -89,11 +111,34 @@
       "fieldtype": "Attach"
     },
     {
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Rights and Protection",
+      "collapsible": 0
+    },
+    {
       "fieldname": "infringement_status",
       "label": "Infringement Status",
       "fieldtype": "Select",
       "options": "None Reported\nSuspected\nUnder Investigation\nEnforcement\nResolved",
       "default": "None Reported"
+    },
+    {
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Ownership and Usage Rights",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "rights_summary",
+      "label": "Ownership / Usage Rights",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "section_5",
+      "fieldtype": "Section Break",
+      "label": "Infringement Notes",
+      "collapsible": 0
     },
     {
       "fieldname": "infringement_notes",

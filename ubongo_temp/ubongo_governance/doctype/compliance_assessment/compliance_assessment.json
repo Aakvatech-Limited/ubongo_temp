@@ -9,20 +9,33 @@
   "editable_grid": 0,
   "search_fields": "requirement,functional_area",
   "field_order": [
+    "section_1",
     "requirement",
-    "functional_area",
     "assessment_date",
     "assessor",
+    "column_1",
+    "functional_area",
     "result",
-    "gap",
-    "action_plan",
+    "evidence",
+    "section_2",
     "action_owner",
     "target_date",
+    "column_2",
     "action_status",
-    "evidence",
+    "section_3",
+    "gap",
+    "section_4",
+    "action_plan",
+    "section_5",
     "remarks"
   ],
   "fields": [
+    {
+      "fieldname": "section_1",
+      "fieldtype": "Section Break",
+      "label": "Assessment",
+      "collapsible": 0
+    },
     {
       "fieldname": "requirement",
       "label": "Requirement",
@@ -30,13 +43,6 @@
       "options": "Compliance Requirement",
       "reqd": 1,
       "in_list_view": 1
-    },
-    {
-      "fieldname": "functional_area",
-      "label": "Functional Area",
-      "fieldtype": "Data",
-      "fetch_from": "requirement.functional_area",
-      "read_only": 1
     },
     {
       "fieldname": "assessment_date",
@@ -53,6 +59,17 @@
       "reqd": 1
     },
     {
+      "fieldname": "column_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "functional_area",
+      "label": "Functional Area",
+      "fieldtype": "Data",
+      "fetch_from": "requirement.functional_area",
+      "read_only": 1
+    },
+    {
       "fieldname": "result",
       "label": "Result",
       "fieldtype": "Select",
@@ -61,14 +78,15 @@
       "in_list_view": 1
     },
     {
-      "fieldname": "gap",
-      "label": "Identified Gap",
-      "fieldtype": "Text Editor"
+      "fieldname": "evidence",
+      "label": "Assessment Evidence",
+      "fieldtype": "Attach"
     },
     {
-      "fieldname": "action_plan",
-      "label": "Corrective Action Plan",
-      "fieldtype": "Text Editor"
+      "fieldname": "section_2",
+      "fieldtype": "Section Break",
+      "label": "Gap and Corrective Action",
+      "collapsible": 0
     },
     {
       "fieldname": "action_owner",
@@ -82,6 +100,10 @@
       "fieldtype": "Date"
     },
     {
+      "fieldname": "column_2",
+      "fieldtype": "Column Break"
+    },
+    {
       "fieldname": "action_status",
       "label": "Action Status",
       "fieldtype": "Select",
@@ -90,9 +112,32 @@
       "in_list_view": 1
     },
     {
-      "fieldname": "evidence",
-      "label": "Assessment Evidence",
-      "fieldtype": "Attach"
+      "fieldname": "section_3",
+      "fieldtype": "Section Break",
+      "label": "Identified Gap",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "gap",
+      "label": "Identified Gap",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "section_4",
+      "fieldtype": "Section Break",
+      "label": "Action Plan",
+      "collapsible": 0
+    },
+    {
+      "fieldname": "action_plan",
+      "label": "Corrective Action Plan",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "section_5",
+      "fieldtype": "Section Break",
+      "label": "Remarks",
+      "collapsible": 0
     },
     {
       "fieldname": "remarks",

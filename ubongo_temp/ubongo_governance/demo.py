@@ -20,7 +20,7 @@ def install_demo():
     })
     _ensure("Governance Risk", "risk_title", "[DEMO] Vendor continuity risk", {
         "domain": "Operations", "project": p, "functional_area": "Procurement", "owner": user,
-        "likelihood": 3, "impact": 4, "status": "Treating", "treatment": "Mitigate",
+        "likelihood_rating": 0.6, "impact_rating": 0.8, "status": "Treating", "treatment": "Mitigate",
         "mitigation_plan": "Evaluate alternate suppliers and review quarterly.",
         "review_date": add_days(today(), 20)
     })

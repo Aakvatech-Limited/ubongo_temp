@@ -13,5 +13,8 @@ doc_events = {
     "Governance Contract": {"validate": "ubongo_temp.governance.validation.validate_contract"},
     "IP License": {"validate": "ubongo_temp.governance.validation.validate_license"},
     "Compliance Assessment": {"validate": "ubongo_temp.governance.validation.validate_assessment"},
+    "Financial Forecast": {"validate": "ubongo_temp.governance.finance.validate_forecast"},
+    "Budget Variance Review": {"validate": "ubongo_temp.governance.finance.validate_bva"},
+    "Bank Feed Entry": {"validate": "ubongo_temp.governance.finance.validate_bank_feed"},
 }
 scheduler_events = {"daily": ["ubongo_temp.governance.monitoring.check_governance_alerts"]}

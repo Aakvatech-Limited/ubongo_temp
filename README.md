@@ -24,3 +24,7 @@ bench --site SITE execute ubongo_temp.governance.demo.install_demo
 See [User Guide](docs/USER_GUIDE.md), [Implementation Notes](docs/IMPLEMENTATION.md) and [Requirements Coverage](docs/REQUIREMENTS_COVERAGE.md).
 
 > Limitations: native Frappe Version audit and Attach fields provide initial document history/storage; full contract document diffing, provider-backed e-signature, immutable approvals, external infringement detection, and live multi-domain analytics require separate integrations/workflows. No live site validation has been performed.
+
+## Finance extension
+
+Includes disabled integration and banking registries, staged bank entries, BVA snapshots, financial scenarios and opt-in synthetic demo seed. No real provider/bank API is implemented. See [finance notes](docs/FINANCE_AND_INTEGRATIONS.md).

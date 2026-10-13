@@ -1,0 +1,102 @@
+{
+  "doctype": "DocType",
+  "name": "Bank Feed Connection",
+  "module": "Governance",
+  "custom": 0,
+  "istable": 0,
+  "autoname": "hash",
+  "field_order": [
+    "connection_name",
+    "bank",
+    "account_label",
+    "masked_account",
+    "currency",
+    "enabled",
+    "feed_mode",
+    "instructions"
+  ],
+  "fields": [
+    {
+      "fieldname": "connection_name",
+      "label": "Connection Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "bank",
+      "label": "Bank",
+      "fieldtype": "Select",
+      "options": "BRA\nCRDB\nStanbic",
+      "reqd": 1
+    },
+    {
+      "fieldname": "account_label",
+      "label": "Account Label",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "masked_account",
+      "label": "Masked Account",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "options": "Currency"
+    },
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "feed_mode",
+      "label": "Feed Method",
+      "fieldtype": "Select",
+      "options": "Bank API\nAggregator\nSFTP\nManual CSV",
+      "default": "Manual CSV"
+    },
+    {
+      "fieldname": "instructions",
+      "label": "Instructions",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

@@ -4,7 +4,7 @@ app_publisher = "Aakvatech Limited"
 app_description = "DARCI, risk, compliance, contract, and intellectual property governance"
 app_email = "info@aakvatech.com"
 app_license = "MIT"
-required_apps = ["frappe"]
+required_apps = []
 add_to_apps_screen = [{"name": "ubongo_temp", "logo": "/assets/ubongo_temp/images/governance.svg", "title": "Ubongo Governance", "route": "/app/governance-overview"}]
 
 doc_events = {

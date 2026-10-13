@@ -1,5 +1,5 @@
 from frappe.model.document import Document
 
 
-class IpAsset(Document):
+class IPAsset(Document):
     pass

@@ -1,5 +1,5 @@
 from frappe.model.document import Document
 
 
-class DarciAssignment(Document):
+class DARCIAssignment(Document):
     pass

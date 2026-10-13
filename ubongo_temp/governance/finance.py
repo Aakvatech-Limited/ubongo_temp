@@ -3,7 +3,7 @@ import frappe
 from frappe.utils import flt, getdate
 
 def validate_forecast(doc, method=None):
-    pattern = r"^\\d{4}-(0[1-9]|1[0-2])$"
+    pattern = r"^\d{4}-(0[1-9]|1[0-2])$"
     if not re.fullmatch(pattern, doc.from_period or "") or not re.fullmatch(pattern, doc.to_period or "") or doc.from_period > doc.to_period:
         frappe.throw("Invalid forecast period range")
     if not doc.get("lines"):

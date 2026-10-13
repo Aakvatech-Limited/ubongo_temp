@@ -1,0 +1,20 @@
+{
+  "doctype": "Report",
+  "name": "Governance Control Register",
+  "ref_doctype": "Compliance Assessment",
+  "report_type": "Script Report",
+  "is_standard": "Yes",
+  "module": "Ubongo Governance",
+  "disabled": 0,
+  "roles": [
+    {
+      "role": "Governance Manager"
+    },
+    {
+      "role": "Governance User"
+    },
+    {
+      "role": "System Manager"
+    }
+  ]
+}

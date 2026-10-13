@@ -1,0 +1,146 @@
+{
+  "doctype": "DocType",
+  "name": "Compliance Assessment",
+  "module": "Ubongo Governance",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "hash",
+  "editable_grid": 0,
+  "search_fields": "requirement,functional_area",
+  "field_order": [
+    "requirement",
+    "functional_area",
+    "assessment_date",
+    "assessor",
+    "result",
+    "gap",
+    "action_plan",
+    "action_owner",
+    "target_date",
+    "action_status",
+    "evidence",
+    "remarks"
+  ],
+  "fields": [
+    {
+      "fieldname": "requirement",
+      "label": "Requirement",
+      "fieldtype": "Link",
+      "options": "Compliance Requirement",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "functional_area",
+      "label": "Functional Area",
+      "fieldtype": "Data",
+      "fetch_from": "requirement.functional_area",
+      "read_only": 1
+    },
+    {
+      "fieldname": "assessment_date",
+      "label": "Assessment Date",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "default": "Today"
+    },
+    {
+      "fieldname": "assessor",
+      "label": "Assessor",
+      "fieldtype": "Link",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "result",
+      "label": "Result",
+      "fieldtype": "Select",
+      "options": "Compliant\nPartially Compliant\nNon-Compliant\nNot Applicable",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "gap",
+      "label": "Identified Gap",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "action_plan",
+      "label": "Corrective Action Plan",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "action_owner",
+      "label": "Action Owner",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "target_date",
+      "label": "Target Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "action_status",
+      "label": "Action Status",
+      "fieldtype": "Select",
+      "options": "Not Required\nOpen\nIn Progress\nVerified\nClosed",
+      "default": "Open",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "evidence",
+      "label": "Assessment Evidence",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "remarks",
+      "label": "Remarks",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 0
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

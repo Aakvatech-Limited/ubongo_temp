@@ -8,13 +8,13 @@ required_apps = []
 add_to_apps_screen = [{"name": "ubongo_temp", "logo": "/assets/ubongo_temp/images/governance.svg", "title": "Ubongo Governance", "route": "/app/governance-overview"}]
 
 doc_events = {
-    "Governance Project": {"validate": "ubongo_temp.governance.validation.validate_darci"},
-    "Governance Risk": {"validate": "ubongo_temp.governance.validation.validate_risk"},
-    "Governance Contract": {"validate": "ubongo_temp.governance.validation.validate_contract"},
-    "IP License": {"validate": "ubongo_temp.governance.validation.validate_license"},
-    "Compliance Assessment": {"validate": "ubongo_temp.governance.validation.validate_assessment"},
-    "Financial Forecast": {"validate": "ubongo_temp.governance.finance.validate_forecast"},
-    "Budget Variance Review": {"validate": "ubongo_temp.governance.finance.validate_bva"},
-    "Bank Feed Entry": {"validate": "ubongo_temp.governance.finance.validate_bank_feed"},
+    "Governance Project": {"validate": "ubongo_temp.ubongo_governance.validation.validate_darci"},
+    "Governance Risk": {"validate": "ubongo_temp.ubongo_governance.validation.validate_risk"},
+    "Governance Contract": {"validate": "ubongo_temp.ubongo_governance.validation.validate_contract"},
+    "IP License": {"validate": "ubongo_temp.ubongo_governance.validation.validate_license"},
+    "Compliance Assessment": {"validate": "ubongo_temp.ubongo_governance.validation.validate_assessment"},
+    "Financial Forecast": {"validate": "ubongo_temp.ubongo_governance.finance.validate_forecast"},
+    "Budget Variance Review": {"validate": "ubongo_temp.ubongo_governance.finance.validate_bva"},
+    "Bank Feed Entry": {"validate": "ubongo_temp.ubongo_governance.finance.validate_bank_feed"},
 }
-scheduler_events = {"daily": ["ubongo_temp.governance.monitoring.check_governance_alerts"]}
+scheduler_events = {"daily": ["ubongo_temp.ubongo_governance.monitoring.check_governance_alerts"]}

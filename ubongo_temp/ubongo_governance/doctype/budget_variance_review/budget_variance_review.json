@@ -1,0 +1,118 @@
+{
+  "doctype": "DocType",
+  "name": "Budget Variance Review",
+  "module": "Ubongo Governance",
+  "custom": 0,
+  "istable": 0,
+  "autoname": "hash",
+  "field_order": [
+    "review_title",
+    "period_from",
+    "period_to",
+    "currency",
+    "status",
+    "lines",
+    "total_budget",
+    "total_actual",
+    "total_variance",
+    "findings"
+  ],
+  "fields": [
+    {
+      "fieldname": "review_title",
+      "label": "Review Title",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "period_from",
+      "label": "Period From",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "period_to",
+      "label": "Period To",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "options": "Currency",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nReviewed\nApproved\nClosed",
+      "default": "Draft"
+    },
+    {
+      "fieldname": "lines",
+      "label": "Budget vs Actual",
+      "fieldtype": "Table",
+      "options": "Budget Variance Line",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_budget",
+      "label": "Total Budget",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_actual",
+      "label": "Total Actual",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_variance",
+      "label": "Total Variance",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "findings",
+      "label": "Findings",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

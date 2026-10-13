@@ -11,7 +11,7 @@ Financial Forecast supports Base, Optimistic, Pessimistic or Custom scenarios. E
 Run on a **development site only**:
 
 ```sh
-bench --site SITE execute ubongo_temp.governance.finance_demo.install_finance_demo
+bench --site SITE execute ubongo_temp.ubongo_governance.finance_demo.install_finance_demo
 ```
 
 Seeds disabled provider configurations, three synthetic bank feed connections and entries, three one-month TZS forecasts, and a BVA. Entries are labeled [DEMO]; no bank credentials and no accounting transactions are generated.

@@ -18,7 +18,7 @@ bench --site SITE migrate
 
 To add **sample data only on a test site**:
 ```sh
-bench --site SITE execute ubongo_temp.governance.demo.install_demo
+bench --site SITE execute ubongo_temp.ubongo_governance.demo.install_demo
 ```
 
 See [User Guide](docs/USER_GUIDE.md), [Implementation Notes](docs/IMPLEMENTATION.md) and [Requirements Coverage](docs/REQUIREMENTS_COVERAGE.md).

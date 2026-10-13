@@ -16,4 +16,4 @@ Use lifecycle stages Requested → Drafting → Internal Review → Negotiation 
 Create an IP Asset for trademarks, copyrights, publications, methodologies and research. Record registration, evidence, territory, rights and infringement notes. Create separate IP License records for each permitted party and permitted use; active licenses require an agreement attachment. Alerts flag approaching expiry, but do not conduct infringement surveillance.
 
 ## 6. Demo
-Only run `bench --site SITE execute ubongo_temp.governance.demo.install_demo` on a test site. Every synthetic business record uses the `[DEMO]` prefix. Delete demo records before production onboarding.
+Only run `bench --site SITE execute ubongo_temp.ubongo_governance.demo.install_demo` on a test site. Every synthetic business record uses the `[DEMO]` prefix. Delete demo records before production onboarding.

@@ -1,0 +1,139 @@
+{
+  "doctype": "DocType",
+  "name": "IP License",
+  "module": "Governance",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "hash",
+  "editable_grid": 0,
+  "search_fields": "asset,licensee",
+  "field_order": [
+    "asset",
+    "licensee",
+    "license_type",
+    "territory",
+    "permitted_use",
+    "valid_from",
+    "valid_until",
+    "status",
+    "agreement",
+    "owner",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "asset",
+      "label": "IP Asset",
+      "fieldtype": "Link",
+      "options": "IP Asset",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "licensee",
+      "label": "Licensee / Permitted User",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "license_type",
+      "label": "Permission Type",
+      "fieldtype": "Select",
+      "options": "Internal Use\nNon-Exclusive\nExclusive\nResearch\nPublication\nThird Party",
+      "reqd": 1
+    },
+    {
+      "fieldname": "territory",
+      "label": "Territory",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "permitted_use",
+      "label": "Permitted Usage",
+      "fieldtype": "Text Editor",
+      "reqd": 1
+    },
+    {
+      "fieldname": "valid_from",
+      "label": "Valid From",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "valid_until",
+      "label": "Valid Until",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nActive\nSuspended\nExpired\nRevoked",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "agreement",
+      "label": "License / Permission Agreement",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "owner",
+      "label": "Responsible Owner",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Restrictions / Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 0
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

@@ -1,0 +1,135 @@
+{
+  "doctype": "DocType",
+  "name": "Integration Connection",
+  "module": "Governance",
+  "custom": 0,
+  "istable": 0,
+  "autoname": "hash",
+  "field_order": [
+    "connection_name",
+    "provider",
+    "enabled",
+    "mode",
+    "endpoint",
+    "tenant_id",
+    "client_id",
+    "client_secret",
+    "access_token",
+    "webhook_secret",
+    "sync_direction",
+    "last_sync_status",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "connection_name",
+      "label": "Connection Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "provider",
+      "label": "Provider",
+      "fieldtype": "Select",
+      "options": "ApprovalMax\nEverhour\nGusto\nGoogle Drive\nPayroll Software\nCustom",
+      "reqd": 1
+    },
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "mode",
+      "label": "Connection Mode",
+      "fieldtype": "Select",
+      "options": "REST API\nOAuth 2.0\nWebhook\nFile Import",
+      "default": "REST API"
+    },
+    {
+      "fieldname": "endpoint",
+      "label": "Service Endpoint",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "tenant_id",
+      "label": "Tenant / Workspace",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "client_id",
+      "label": "Client ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "client_secret",
+      "label": "Client Secret",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "access_token",
+      "label": "Access Token",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "webhook_secret",
+      "label": "Webhook Secret",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "sync_direction",
+      "label": "Direction",
+      "fieldtype": "Select",
+      "options": "Inbound\nOutbound\nBidirectional",
+      "default": "Inbound"
+    },
+    {
+      "fieldname": "last_sync_status",
+      "label": "Sync Status",
+      "fieldtype": "Select",
+      "options": "Never Run\nSuccess\nFailed",
+      "default": "Never Run",
+      "read_only": 1
+    },
+    {
+      "fieldname": "notes",
+      "label": "Mapping / Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

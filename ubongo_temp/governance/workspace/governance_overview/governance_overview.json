@@ -1,0 +1,277 @@
+{
+  "doctype": "Workspace",
+  "name": "Governance Overview",
+  "label": "Governance Overview",
+  "title": "Governance Overview",
+  "module": "Governance",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "shield",
+  "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Start Here\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Governance Project\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Governance Risk\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Compliance Assessment\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Governance Contract\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Registers and Analytics\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Governance Registers\",\"col\":6}},{\"type\":\"card\",\"data\":{\"card_name\":\"Monitoring and Reporting\",\"col\":6}},{\"type\":\"header\",\"data\":{\"text\":\"Finance and Integrations\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Finance and Integrations\",\"col\":12}}]",
+  "shortcuts": [
+    {
+      "type": "DocType",
+      "link_to": "Governance Project",
+      "label": "Governance Project",
+      "color": "Grey",
+      "doc_view": "List"
+    },
+    {
+      "type": "DocType",
+      "link_to": "Governance Risk",
+      "label": "Governance Risk",
+      "color": "Grey",
+      "doc_view": "List"
+    },
+    {
+      "type": "DocType",
+      "link_to": "Compliance Assessment",
+      "label": "Compliance Assessment",
+      "color": "Grey",
+      "doc_view": "List"
+    },
+    {
+      "type": "DocType",
+      "link_to": "Governance Contract",
+      "label": "Governance Contract",
+      "color": "Grey",
+      "doc_view": "List"
+    }
+  ],
+  "links": [
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Governance Project",
+      "label": "Governance Project",
+      "hidden": 0,
+      "onboard": 0,
+      "dependencies": "",
+      "icon": "",
+      "description": "",
+      "is_query_report": 0
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Governance Risk",
+      "label": "Governance Risk",
+      "hidden": 0,
+      "onboard": 0,
+      "dependencies": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Compliance Requirement",
+      "label": "Compliance Requirement",
+      "hidden": 0,
+      "onboard": 0,
+      "dependencies": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Compliance Assessment",
+      "label": "Compliance Assessment",
+      "hidden": 0,
+      "onboard": 0,
+      "dependencies": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Governance Contract",
+      "label": "Governance Contract",
+      "hidden": 0,
+      "onboard": 0,
+      "dependencies": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "IP Asset",
+      "label": "IP Asset",
+      "hidden": 0,
+      "onboard": 0,
+      "dependencies": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "IP License",
+      "label": "IP License",
+      "hidden": 0,
+      "onboard": 0,
+      "dependencies": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "type": "Link",
+      "link_type": "Report",
+      "link_to": "Governance Control Register",
+      "label": "Governance Control Register",
+      "is_query_report": 1
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Integration Connection",
+      "label": "Integration Connection"
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Bank Feed Connection",
+      "label": "Bank Feed Connection"
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Bank Feed Entry",
+      "label": "Bank Feed Entry"
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Financial Forecast",
+      "label": "Financial Forecast"
+    },
+    {
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Budget Variance Review",
+      "label": "Budget Variance Review"
+    },
+    {
+      "type": "Link",
+      "link_type": "Report",
+      "link_to": "Financial Scenario Comparison",
+      "label": "Financial Scenario Comparison",
+      "is_query_report": 1
+    },
+    {
+      "type": "Link",
+      "link_type": "Report",
+      "link_to": "Budget Variance Summary",
+      "label": "Budget Variance Summary",
+      "is_query_report": 1
+    }
+  ],
+  "cards": [
+    {
+      "card_name": "Governance Registers",
+      "links": [
+        {
+          "label": "Governance Project",
+          "type": "DocType",
+          "link_to": "Governance Project"
+        },
+        {
+          "label": "Governance Risk",
+          "type": "DocType",
+          "link_to": "Governance Risk"
+        },
+        {
+          "label": "IP Asset",
+          "type": "DocType",
+          "link_to": "IP Asset"
+        },
+        {
+          "label": "IP License",
+          "type": "DocType",
+          "link_to": "IP License"
+        }
+      ]
+    },
+    {
+      "card_name": "Monitoring and Reporting",
+      "links": [
+        {
+          "label": "Compliance Requirement",
+          "type": "DocType",
+          "link_to": "Compliance Requirement"
+        },
+        {
+          "label": "Compliance Assessment",
+          "type": "DocType",
+          "link_to": "Compliance Assessment"
+        },
+        {
+          "label": "Governance Contract",
+          "type": "DocType",
+          "link_to": "Governance Contract"
+        },
+        {
+          "label": "Governance Control Register",
+          "type": "Report",
+          "link_to": "Governance Control Register"
+        }
+      ]
+    },
+    {
+      "card_name": "Finance and Integrations",
+      "links": [
+        {
+          "label": "Integration Connection",
+          "type": "DocType",
+          "link_to": "Integration Connection"
+        },
+        {
+          "label": "Bank Feed Connection",
+          "type": "DocType",
+          "link_to": "Bank Feed Connection"
+        },
+        {
+          "label": "Bank Feed Entry",
+          "type": "DocType",
+          "link_to": "Bank Feed Entry"
+        },
+        {
+          "label": "Financial Forecast",
+          "type": "DocType",
+          "link_to": "Financial Forecast"
+        },
+        {
+          "label": "Budget Variance Review",
+          "type": "DocType",
+          "link_to": "Budget Variance Review"
+        },
+        {
+          "label": "Financial Scenario Comparison",
+          "type": "Report",
+          "link_to": "Financial Scenario Comparison"
+        },
+        {
+          "label": "Budget Variance Summary",
+          "type": "Report",
+          "link_to": "Budget Variance Summary"
+        }
+      ]
+    }
+  ],
+  "charts": [],
+  "number_cards": [],
+  "roles": [
+    {
+      "role": "Governance Manager"
+    },
+    {
+      "role": "Governance User"
+    },
+    {
+      "role": "System Manager"
+    }
+  ]
+}

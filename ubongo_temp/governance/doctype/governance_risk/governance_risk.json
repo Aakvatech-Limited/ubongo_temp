@@ -1,0 +1,160 @@
+{
+  "doctype": "DocType",
+  "name": "Governance Risk",
+  "module": "Governance",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "hash",
+  "editable_grid": 0,
+  "title_field": "risk_title",
+  "search_fields": "risk_title,functional_area",
+  "field_order": [
+    "risk_title",
+    "domain",
+    "project",
+    "functional_area",
+    "owner",
+    "likelihood",
+    "impact",
+    "risk_score",
+    "treatment",
+    "status",
+    "review_date",
+    "description",
+    "mitigation_plan",
+    "evidence"
+  ],
+  "fields": [
+    {
+      "fieldname": "risk_title",
+      "label": "Risk Title",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "domain",
+      "label": "Domain",
+      "fieldtype": "Select",
+      "options": "Project\nOperations\nCompliance\nContract\nIntellectual Property\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "project",
+      "label": "Governance Project",
+      "fieldtype": "Link",
+      "options": "Governance Project"
+    },
+    {
+      "fieldname": "functional_area",
+      "label": "Functional Area",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "owner",
+      "label": "Risk Owner",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "likelihood",
+      "label": "Likelihood (1-5)",
+      "fieldtype": "Int",
+      "default": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "impact",
+      "label": "Impact (1-5)",
+      "fieldtype": "Int",
+      "default": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "risk_score",
+      "label": "Risk Score",
+      "fieldtype": "Int",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "treatment",
+      "label": "Treatment",
+      "fieldtype": "Select",
+      "options": "Avoid\nMitigate\nTransfer\nAccept",
+      "default": "Mitigate"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Open\nTreating\nMonitoring\nClosed",
+      "default": "Open",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "review_date",
+      "label": "Next Review",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "description",
+      "label": "Risk Description",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "mitigation_plan",
+      "label": "Mitigation Plan",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "evidence",
+      "label": "Evidence",
+      "fieldtype": "Attach"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 0
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

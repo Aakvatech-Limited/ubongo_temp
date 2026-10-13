@@ -1,0 +1,75 @@
+{
+  "doctype": "DocType",
+  "name": "Budget Variance Line",
+  "module": "Governance",
+  "custom": 0,
+  "istable": 1,
+  "autoname": "",
+  "field_order": [
+    "account",
+    "category",
+    "budget",
+    "actual",
+    "variance",
+    "variance_percent",
+    "favourability",
+    "explanation"
+  ],
+  "fields": [
+    {
+      "fieldname": "account",
+      "label": "Account / Cost Center",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "category",
+      "label": "Category",
+      "fieldtype": "Select",
+      "options": "Revenue\nExpense\nCapital",
+      "reqd": 1
+    },
+    {
+      "fieldname": "budget",
+      "label": "Budget",
+      "fieldtype": "Currency",
+      "reqd": 1
+    },
+    {
+      "fieldname": "actual",
+      "label": "Actual",
+      "fieldtype": "Currency",
+      "reqd": 1
+    },
+    {
+      "fieldname": "variance",
+      "label": "Actual minus Budget",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "variance_percent",
+      "label": "Variance Percent",
+      "fieldtype": "Percent",
+      "read_only": 1
+    },
+    {
+      "fieldname": "favourability",
+      "label": "Favourability",
+      "fieldtype": "Select",
+      "options": "Favourable\nUnfavourable\nOn Budget",
+      "read_only": 1
+    },
+    {
+      "fieldname": "explanation",
+      "label": "Explanation",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

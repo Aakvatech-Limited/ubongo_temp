@@ -1,0 +1,108 @@
+{
+  "doctype": "DocType",
+  "name": "Bank Feed Entry",
+  "module": "Governance",
+  "custom": 0,
+  "istable": 0,
+  "autoname": "hash",
+  "field_order": [
+    "connection",
+    "external_id",
+    "posting_date",
+    "narration",
+    "amount",
+    "currency",
+    "status",
+    "bank_transaction",
+    "source_reference"
+  ],
+  "fields": [
+    {
+      "fieldname": "connection",
+      "label": "Bank Feed Connection",
+      "fieldtype": "Link",
+      "options": "Bank Feed Connection",
+      "reqd": 1
+    },
+    {
+      "fieldname": "external_id",
+      "label": "External ID",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "posting_date",
+      "label": "Posting Date",
+      "fieldtype": "Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "narration",
+      "label": "Narration",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "amount",
+      "label": "Signed Amount",
+      "fieldtype": "Currency",
+      "reqd": 1
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "options": "Currency"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Staged\nReviewed\nImported\nIgnored\nFailed",
+      "default": "Staged"
+    },
+    {
+      "fieldname": "bank_transaction",
+      "label": "ERPNext Bank Transaction Reference",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "source_reference",
+      "label": "Source Reference",
+      "fieldtype": "Data"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

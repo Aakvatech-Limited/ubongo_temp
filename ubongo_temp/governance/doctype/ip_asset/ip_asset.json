@@ -1,0 +1,147 @@
+{
+  "doctype": "DocType",
+  "name": "IP Asset",
+  "module": "Governance",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 0,
+  "autoname": "hash",
+  "editable_grid": 0,
+  "title_field": "asset_title",
+  "search_fields": "asset_title,registration_number",
+  "field_order": [
+    "asset_title",
+    "asset_type",
+    "owner",
+    "functional_area",
+    "registration_number",
+    "registration_date",
+    "expiry_date",
+    "territory",
+    "status",
+    "rights_summary",
+    "document",
+    "infringement_status",
+    "infringement_notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "asset_title",
+      "label": "IP Asset",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "asset_type",
+      "label": "Type",
+      "fieldtype": "Select",
+      "options": "Trademark\nCopyright\nResearch Finding\nPublication\nMethodology\nPatent\nTrade Secret\nOther",
+      "reqd": 1
+    },
+    {
+      "fieldname": "owner",
+      "label": "IP Owner",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "functional_area",
+      "label": "Functional Area",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "registration_number",
+      "label": "Registration / Reference Number",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "registration_date",
+      "label": "Registration Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "expiry_date",
+      "label": "Registration Expiry",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "territory",
+      "label": "Territory",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nRegistered\nActive\nDisputed\nExpired\nArchived",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rights_summary",
+      "label": "Ownership / Usage Rights",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "document",
+      "label": "Evidence / Registration",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "infringement_status",
+      "label": "Infringement Status",
+      "fieldtype": "Select",
+      "options": "None Reported\nSuspected\nUnder Investigation\nEnforcement\nResolved",
+      "default": "None Reported"
+    },
+    {
+      "fieldname": "infringement_notes",
+      "label": "Infringement / Enforcement Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Governance Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "Governance User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 0
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    }
+  ],
+  "links": [],
+  "actions": [],
+  "states": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}
